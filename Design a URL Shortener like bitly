@@ -1,0 +1,24 @@
+What is bitly?  Bit.ly is the URL Shortnering service that converts long URLs into shorter, managable links. It also provides analytics for the shortened URLs.
+
+Functional Requirements: 
+    User should be able to submit a long URL and receive a shortened one. 
+        Optionally, User should be able to a custom alias for the shortened URL.
+        Optionally, User should be able to specify an expiration date for their shortened URLs.
+    User should be able to access original URL using the shortened URL.
+
+Non- Functional Requirements:
+    The system should ensure uniqueness for the shortened code(no two long URLs can map to the same short URL)
+    The redirection should occure with minimal delay(<100ms)
+    The system should be reliable and available 99.99% time(availablity > consistency)
+    The system should scale to support 1B shortened URLs and 100M DAU
+
+Core Entities
+    Original URL: The original long URL the user wants to shortened
+    Short URL: The shortened URL that the user receives and can share
+    User: Represents the user who create the short URL
+
+The API
+    POST: create a new resource
+    GET: Read an existing resource
+    PUT: Update an existion resource
+    DELETE: Delete an existing resource
